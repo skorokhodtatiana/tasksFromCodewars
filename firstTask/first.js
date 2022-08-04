@@ -1,13 +1,14 @@
 /**Задача: при передаче в функцию какого-либо числа, выводить все числа, на которое делится передаваемое число без остатка*/
-const divisors = (num) => {
+function divisors(integer) {
 	const arr = [];
-	const unSuit = [];
-	let i;
-	for(i = 1; i <= num; i++) {
-		let suit = num % i;
-		suit === 0 ? arr.push(i) : unSuit.push(i);
-	}
-	console.log(arr);
-};
+	  const unSuit = [];
+	  let i;
+	  for(i = 2; i < integer; i++) {
+		  let suit = integer % i;
+		  suit === 0 ? arr.push(i) : '';
+	 
+	  }
+	  arr.length === 0 ? console.log(`${integer} is prime`) : console.log(arr);
+  };
 
-divisors(16);
+divisors(15);
