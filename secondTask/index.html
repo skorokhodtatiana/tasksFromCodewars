@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+	<script>
+		const maskify = (val) => {
+			const maskVal = '#';
+			const clearString = val.replace(/\s+/g, '');
+			const arrVal = clearString.split('');
+			// const clearArr = arrVal.filter(function(el){
+			// 	el != '';
+			// 	return el;
+			// })
+			const fourNum = arrVal.slice(-4);
+			console.log(fourNum);
+		};
+
+		maskify('345 33 78');
+	</script>
 </body>
 </html>
