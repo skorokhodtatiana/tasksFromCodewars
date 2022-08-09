@@ -9,25 +9,16 @@
 <body>
 	<script>
 		const maskify = (val) => {
-			const maskVal = '#';
 			const clearString = val.replace(/\s+/g, '');
 			const arrVal = clearString.split('');
-			console.log(arrVal.length - 1);
-			// arrVal.forEach(el => {
-			// 	el = maskVal;
-			// })
-			const newArr = arrVal.filter((value,index) => index < arrVal.length - 4);
-			console.log("новый" + newArr);
-
-			const clearArr = newArr.splice(0,newArr.length-1, '#')
-			console.log("маска" + clearArr);
-			const fourNum = arrVal.slice(-4);
-			// const fourNum = arrVal.splice(-1, 3)
-			console.log(fourNum);
-			console.log(arrVal);
+			let i;
+			for(i=0;i<arrVal.length - 4;i++ ) {
+				arrVal[i]='#';
+			}
+			const str = arrVal.toString('');
+			const clearStr = str.replace(/,/g, '');
+			return clearStr;
 		};
-
-		maskify('345 33 78');
 	</script>
 </body>
 </html>
