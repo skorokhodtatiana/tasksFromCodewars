@@ -9,8 +9,18 @@
 <body>
     <script>
         function solution(str, ending){
+            const arrStr = str.split('');
+            const arrEnding = ending.split('');
+            console.log(arrEnding);
+            const lengthArrEnding = arrEnding.length;
+            const partArrString = arrStr.slice(-lengthArrEnding);
             
+            const stinFirst = partArrString.join();
+            const stringSecond = arrEnding.join();
+            const boleanSolution = stinFirst === stringSecond;
+            console.log(boleanSolution);
         }
+        solution('кавал','');
     </script>
 </body>
 </html>
