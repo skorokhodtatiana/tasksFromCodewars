@@ -10,15 +10,13 @@
     <script>
         function duplicateCount(text){
             const arrText = text.split('');
-            
-            console.log(arrText);
             const duplicate = arrText.filter((e, index, arr) => 
                 arr.indexOf(e) != index
             )
             if(duplicate.length === 0) {
                 return 0;
             }
-            
+
             console.log(duplicate);
         };
 
