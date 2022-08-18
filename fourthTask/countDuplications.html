@@ -9,7 +9,9 @@
 <body>
     <script>
         function duplicateCount(text){
-            const arrText = text.split('');
+            const lowerString = text.toLowerCase();
+            console.log(lowerString);
+            const arrText = lowerString.split('');
             const duplicate = arrText.filter((e, index, arr) => 
                 arr.indexOf(e) != index
             )
@@ -20,7 +22,7 @@
             console.log(duplicate);
         };
 
-        duplicateCount('countot');
+        duplicateCount('Indivisibility');
     </script>
 </body>
 </html>
