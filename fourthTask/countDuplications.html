@@ -10,7 +10,6 @@
     <script>
         function duplicateCount(text){
             const lowerString = text.toLowerCase();
-            console.log(lowerString);
             const arrText = lowerString.split('');
             const duplicate = arrText.filter((e, index, arr) => 
                 arr.indexOf(e) != index
@@ -18,7 +17,6 @@
             if(duplicate.length === 0) {
                 return 0;
             }
-
             console.log(duplicate);
         };
 
