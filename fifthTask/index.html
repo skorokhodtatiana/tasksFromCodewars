@@ -11,6 +11,10 @@
 		const numbers = [1, 2, 3, 4, 5, 6, 7, 7 , 8, 9, 9];
 		console.log(...new Set(numbers));
 		//Объект Set это функция ES6, позволяет хранить уникальные значения, выведет 123456789
+		const newNumbers = numbers.map(num => 
+			num * 2
+		);
+		console.log(newNumbers);
 	</script>
 </body>
 </html>
