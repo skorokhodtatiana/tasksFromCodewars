@@ -7,24 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function duplicateCount(text){
-            const lowerString = text.toLowerCase();
-            const arrText = lowerString.split('');
-            const duplicate = arrText.filter((e, index, arr) => 
-                arr.indexOf(e) != index
-            )
-            if(duplicate.length === 0) {
-                return 0;
-            }
-            // duplicate.forEach(nums => {
-            //     num
-            // })
-            
-            console.log(duplicate);
-        };
+	<script>
+		function duplicateCount(text){
+			const lowerString = text.toLowerCase();
+			const arrText = lowerString.split('');
+			const duplicate = arrText.filter((e, index, arr) => 
+			arr.indexOf(e) != index)
+			if(duplicate.length === 0) {
+			return 0;
+			}
+			const newDuplicate = [...new Set(duplicate)];
+			return newDuplicate.length;
+		}
 
-        duplicateCount('Indivisibility');
-    </script>
+		duplicateCount('Indivisibility');
+		// Test.assertEquals(duplicateCount(""), 0);
+		// Test.assertEquals(duplicateCount("abcde"), 0);
+		// Test.assertEquals(duplicateCount("aabbcde"), 2);
+		// Test.assertEquals(duplicateCount("aabBcde"), 2,"should ignore case");
+		// Test.assertEquals(duplicateCount("Indivisibility"), 1)
+		// Test.assertEquals(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
+	</script>
 </body>
 </html>
