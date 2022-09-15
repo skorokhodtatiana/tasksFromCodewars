@@ -12,8 +12,19 @@
         const selectsVowels = (val) => {
             const valArr = val.split('');
             const arrVowels = ['a', 'e', 'i', 'o', 'u'];
-            // for(let i; i<)
-            console.log(valArr)
+            let newArr;
+            
+            for(let i; i < valArr.length; i++) {
+                for(let j; j < arrVowels.length; j++) {
+                    if (valArr[i] === arrVowels[j]) {
+                        console.log('newArr');
+                        newArr.push(valArr[i]);
+                        console.log(valArr[i]);
+                    }
+                    console.log(newArr);
+                }
+                console.log(newArr);
+            }
         }
 
         selectsVowels('string');
