@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//функция возвращающая true или false если это изограмма или нет (слово содержащие только неповторяющие буквы)
+		const isogram = (val) => {
+			const arr = val.toLowerCase().split('');
+			console.log(arr);
+			const isogram = [...new Set(arr)];
+			if (arr.length === isogram.length) {
+				console.log(true);
+			} else {
+				console.log(false)
+			} 
+		};
+		isogram('fopty')
+	</script>
+</body>
+</html>
