@@ -9,6 +9,19 @@
 <body>
 	<script>
 		//при передаче в функцию списка строк возвращает теже строки, но пронумерованные
+		const numberArr = (arr) => {
+			if (arr.length === 0) {
+				return arr;
+			}
+			let i;
+			let newArr = [];
+			for(i = 1; i <= arr.length; i++) {
+				console.log(i);
+				newArr.push({i: arr[i-1]})
+			}
+			console.log(newArr);
+		};
+		numberArr(['a','b','c'])
 	</script>
 </body>
 </html>
