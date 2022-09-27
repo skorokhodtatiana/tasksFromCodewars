@@ -14,13 +14,23 @@
 		const accum = (s) => {
 			const arr = s.split('');
 			for(let i = 0; i < arr.length; i++) {
-				for(let j = 1; j < arr.length; j++) {
+				for(let j = 1; j < arr.length; j--) {
 					document.write(arr[i]);
 				}
 			}
 		};
 
-		accum('bye')
+		const fib = n => {
+			let prev = 0, next = 1;
+			for(let i = 0; i < n; i++){
+			let temp = next;
+			next = prev + next;
+			prev = temp;
+			}
+			console.log(prev);
+		}
+	fib(20);
+	accum('bye')
 	</script>
 </body>
 </html>
