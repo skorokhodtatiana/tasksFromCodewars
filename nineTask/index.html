@@ -8,27 +8,32 @@
 </head>
 <body>
 	<script>
-		//accum("abcd") -> "A-Bb-Ccc-Dddd"
+		//accum("abcd") -> "A-Bb-Ccc-Dddd" [A, Bb, Ccc ]
 		//accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 		//accum("cwAt") -> "C-Ww-Aaa-Tttt"
 		const accum = (s) => {
 			const arr = s.split('');
 			console.log(arr);
 			let newArr = [];
+			let newArr2 = [];
 			for(let i = 0; i < arr.length; i++) {
-				document.write(arr[i].toUpperCase());
-				newArr.push(arr[i].toUpperCase());
+				//document.write(arr[i].toUpperCase());
+				newArr = [arr[i].toUpperCase()];
+				newArr2.push(newArr);
+				//console.log(arr[i].toUpperCase());
+				// newArr.push(arr[i].toUpperCase());
 				for(let j = 0; j <= i; j++) {
-					document.write(arr[i]);
+					//document.write(arr[i]);
 					newArr.push(arr[i]);
+					//newArr2.push(newArr);
+				console.log(arr[i]);
 				console.log(newArr);
 				}
-				const string = newArr.join('-');
-				console.log(string);
-				// for(const i = 0; i < newArr.length; i++) {
-
-				// }
 			}
+			const string = newArr2.join('-');
+			let str = string.replace(/\s/g, '');
+			console.log(str);
+			console.log(newArr2);
 		};
 
 	accum("abcd")
