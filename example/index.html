@@ -44,10 +44,24 @@
 		<li>Кавказская кухня</li>
 		<li>Прибалтийская кухня</li> 
 	</ol>
-	<form>
+	<!-- <form>
 		<label>
 			<input>Введите
 		</label>
+	</form> --> 
+	<form action = "somepage.php" method="get" novalidate> <!-- указываем адрес, куда отправляется форма и указываем, что проверка данных на корректность, введенных пользователем в форму не производится -->	
+		Your phone: <input type = "tel" name = "user-phone"> <!-- определяем элемент управления для ввода телефонного номера -->
+		<input type = "submit"> <!-- определяем кнопку отправки формы -->
+	</form>
+	<form action="select1.php" method="post">
+		<p><select size="1" multiple name="hero[]">
+			<option disabled>Выберите героя</option>
+			<option value="Чебурашка">Чебурашка</option>
+			<option selected value="Крокодил Гена">Крокодил Гена</option>
+			<option value="Шапокляк">Шапокляк</option>
+			<option value="Крыса Лариса">Крыса Лариса</option>
+			</select></p>
+		<p><input type="submit" value="Отправить"></p>
 	</form>
 </body>
 </html>
