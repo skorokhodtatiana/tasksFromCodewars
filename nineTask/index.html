@@ -12,31 +12,33 @@
 		//accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 		//accum("cwAt") -> "C-Ww-Aaa-Tttt"
 		const accum = (s) => {
-			const arr = s.split('');
+			const arr = s.toLowerCase().split('');
 			console.log(arr);
 			let newArr = [];
 			let newArr2 = [];
 			for(let i = 0; i < arr.length; i++) {
-				//document.write(arr[i].toUpperCase());
-				newArr = [arr[i].toUpperCase()];
-				newArr2.push(newArr);
+
 				//console.log(arr[i].toUpperCase());
-				// newArr.push(arr[i].toUpperCase());
-				for(let j = 0; j <= i; j++) {
+				newArr.push(arr[i].toUpperCase());
+				
+				for(let j = 1; j <= i; j++) {
 					//document.write(arr[i]);
+					
 					newArr.push(arr[i]);
+					
 					//newArr2.push(newArr);
 				console.log(arr[i]);
 				console.log(newArr);
+					
 				}
 			}
-			const string = newArr2.join('-');
+			const string = newArr.join('');
 			let str = string.replace(/\s/g, '');
 			console.log(str);
-			console.log(newArr2);
+			console.log(newArr);
 		};
 
-	accum("abcd")
+	accum("cwAt")
 	</script>
 </body>
 </html>
