@@ -11,11 +11,10 @@
 		const rot13 = (message) => {
 			console.log(message.split(''))
 			const answear = message.split('').map(let => String.fromCharCode(let.charCodeAt(0) + (let.toLowerCase() < 'n' ? 13 : -13)))
-			console.log(answear.join(''));
-			console.log(answear)
+			console.log(answear.join('').replace(/-/ig, ' '));
 		}
 
-		rot13('abcd abcd')
+		rot13('Ruby is cool!')
 	</script>
 </body>
 </html>
