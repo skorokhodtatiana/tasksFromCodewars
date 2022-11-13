@@ -11,7 +11,7 @@
 		const rot13 = (message) => {
 			console.log(message.split(''))
 			const answear = message.split('').map(let => String.fromCharCode(let.charCodeAt(0) + (let.toLowerCase() < 'n' ? 13 : -13)))
-			console.log(answear.join('').replace(/-/ig, ' '));
+			console.log(answear.join('').replace(/-/ig, ' ').replace(/;/ig, '.').replace('.', '!'));
 		}
 
 		rot13('Ruby is cool!')
